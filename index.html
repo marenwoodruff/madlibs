@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Madlibs</title>
+    <script language="JavaScript">
+        function makeMadlibs(){
+            var story = "<html><head><title>Julius Caesar</title></head></html>" + "<body></h1>Julius Caesar</h1><p>" + "Friends, Romans, " + 
+                document.madlibs.input1.value + ", lend me your " + 
+                document.madlibs.input2.value + " Caesar, not to praise him.</br>" + "The evil that men do lives after them;</br>" + "The good is oft interred with their " + 
+                document.madlibs.input3.value + ";</br>So let it be with " + 
+                document.madlibs.input5.value + ". The noble Brutus</br> Hath told you Casesar was " + 
+                document.madlibs.input6.value + ":<br>" + "If it were so, it was a grevious fault, </br>" + "And greviously hath Casear answer'd it.</p></body><html>";
+            
+            libsWin = window.open("", "madlibs", "width=400,height=300,scrollbars=yes");
+            
+            libsWin.document.write(story);
+            libsWin.document.close();
+
+        }
+    </script>
+    <style>
+        body {text-align: center;}
+        table {text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>Fill in the blanks, to create the madlib!<h1>
+    <form name="madlibs" id="libs">
+        <table>
+            <tr>
+                <td>Plural Noun:</td>
+                <td><input type="text" name="input1"</td>
+            </tr>
+            <tr>
+                <td>Part of Body:</td>
+                <td><input type="text" name="input2"</td>
+            </tr>
+            <tr>
+                <td>Verb:</td>
+                <td><input type="text" name="input3"</td>
+            </tr>
+            <tr>
+                <td>Plural Noun:</td>
+                <td><input type="text" name="input4"</td>
+            </tr>
+            <tr>
+                <td>Politician:</td>
+                <td><input type="text" name="input5"</td>
+            </tr>
+            <tr>
+                <td>Adjective:</td>
+                <td><input type="text" name="input6"</td>
+            </tr>
+        </table>
+        <br />
+        <input type="button" value="Create The Story!" onClick="makeMadlibs();">
+    </form>
+</body>
+</html>
