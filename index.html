@@ -2,13 +2,13 @@
 <head>
     <title>Madlibs</title>
     <script language="JavaScript">
-        function makeMadlibs(){
+        function makeMadlibs(form){
             var story = "<html><head><title>Julius Caesar</title></head></html>" + "<body></h1>Julius Caesar</h1><p>" + "Friends, Romans, " + 
-                document.madlibs.input1.value + ", lend me your " + 
-                document.madlibs.input2.value + " Caesar, not to praise him.</br>" + "The evil that men do lives after them;</br>" + "The good is oft interred with their " + 
-                document.madlibs.input3.value + ";</br>So let it be with " + 
-                document.madlibs.input5.value + ". The noble Brutus</br> Hath told you Casesar was " + 
-                document.madlibs.input6.value + ":<br>" + "If it were so, it was a grevious fault, </br>" + "And greviously hath Casear answer'd it.</p></body><html>";
+                form.input1.value + ", lend me your " + 
+                form.input2.value + " Caesar, not to praise him.</br>" + "The evil that men do lives after them;</br>" + "The good is oft interred with their " + 
+                form.input3.value + ";</br>So let it be with " + 
+                form.input5.value + ". The noble Brutus</br> Hath told you Casesar was " + 
+                form.input6.value + ":<br>" + "If it were so, it was a grevious fault, </br>" + "And greviously hath Casear answer'd it.</p></body><html>";
             
             libsWin = window.open("", "madlibs", "width=400,height=300,scrollbars=yes");
             
@@ -52,7 +52,7 @@
             </tr>
         </table>
         <br />
-        <input type="button" value="Create The Story!" onClick="makeMadlibs();">
+        <input type="button" value="Create The Story!" onClick="makeMadlibs(this.form);">
     </form>
 </body>
 </html>
